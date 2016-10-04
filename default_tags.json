@@ -1,0 +1,62 @@
+[
+    {
+        "tag": "WATER",
+        "description": "Drinking water available at this point"
+    },
+    {
+        "tag": "TOILET",
+        "description": "Public bathroom available at this point"
+    },
+    {
+        "tag": "STAIRS",
+        "description": "Public staircase, ideal for quadripedal"
+    },
+    {
+        "tag": "HANDRAILS",
+        "description": "Sturdy handrails, ideal for balance training and precisions"
+    },
+    {
+        "tag": "LOW RAILS",
+        "description": "Stury rails or sleepers at ground level, ideal for balance training and precisions"
+    },
+    {
+        "tag": "OVERHEAD BARS",
+        "description": "Sturdy overhead beams or pipees, ideal for laches or pull-ups"
+    },
+    {
+        "tag": "LOW WALLS",
+        "description": "Walls roughly 1m high or less, ideal for practicing vaults and precisions"
+    },
+    {
+        "tag": "MEDIUM WALLS",
+        "description": "Walls between 1-2m in height, ideal for practicing wall-runs, pops and drops"
+    },
+    {
+        "tag": "HIGH WALLS",
+        "description": "Walls roughly 2m high or more, ideal for advanced wallrun practice"
+    },
+    {
+        "tag": "PARALLEL WALLS",
+        "description": "Walls that are set between 1-3m apart from one another, ideal for precisions or arm jumps"
+    },
+    {
+        "tag": "BOULDERING",
+        "description": "Walls which can be mantled with rock climbing techniques"
+    },
+    {
+        "tag": "PLAYGROUND",
+        "description": "Children's park equipment which can be repurposed for training"
+    },
+    {
+        "tag": "TREES",
+        "description": "Large climbable trees"
+    },
+    {
+        "tag": "ROCKS",
+        "description": "Large stable rock arrangements or formations"
+    },
+    {
+        "tag": "GYM",
+        "description": "Private facility with parkour-friendly training area"
+    }
+]
