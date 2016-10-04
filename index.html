@@ -28,9 +28,51 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.Navigation({
     position: 'top-right'
 }));
-map.addControl(new mapboxgl.Geolocate({
+
+var geolocate = new mapboxgl.Geolocate({
     position: 'top-right'
-}));
+});
+geolocate.on('geolocate', function (data) {
+    console.log(data);
+    traceur.geometry.coordinates = [data.coords.longitude, data.coords.latitude];
+    map.getSource('traceur-src').setData({
+        'type': 'FeatureCollection',
+        'features': [traceur]
+    });
+});
+map.addControl(geolocate);
+var traceur = null;
+map.on('load', function() {
+    map.addSource('traceur-src', {
+        'type': 'geojson',
+        'data': {
+            'type': 'FeatureCollection',
+            'features': []
+        }  
+    });
+    traceur = {
+        'type': 'Feature',
+        'properties': {
+            'name': 'Current position'
+        },
+        'geometry': {
+            'type': 'Point',
+            'coordinates': [0, 0]
+        }
+    }
+
+    map.addLayer({
+        'id': 'traceur',
+        'source': 'traceur-src',
+        'type': 'circle',
+        'paint': {
+            'circle-radius': 8,
+            'circle-color': '#edb100'
+        }
+    });
+});
+
+
 </script>
 
 </body>
